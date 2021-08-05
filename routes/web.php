@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/client', 'ClientController@index');
+Route::get('/supplier', 'SupplierController@index');
+Route::get('/product', 'ProductController@index');
+Route::get('/sale', 'SaleController@index');
+Route::get('/purchase', 'PurchaseController@index');
+Route::get('/invoice', 'InvoiceController@index');
+Route::get('/invoicedetail', 'InvoiceDetailController@index');
