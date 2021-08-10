@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CursoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/curso', [CursoController::class, 'index']);
+Route::get('/curso/create', [CursoController::class, 'create']);
+Route::get('/curso/show', [CursoController::class, 'show']);
+
+Route::get('/home', [HomeController::class, 'index']);
+Route::get('/home/create', [HomeController::class, 'create']);
+Route::get('/home/show', [HomeController::class, 'show']);
 
 Route::get('/client', 'ClientController@index');
 Route::get('/supplier', 'SupplierController@index');
